@@ -5,14 +5,11 @@ import requests
 app = Flask(__name__)
 
 users = []
-"""
-BU KISIMDA TANIMLAYACAĞIMIZ FONKSİYON ÇALIŞMASINI İSTEDİĞİMİZ AMA EKRANDA GÖZÜKMESİNİ İSTEMEDİĞİMİZ FONKSİYONLARI YAZABİLİRİZ.
 
-"""
 
 #KULLANICI EKLEMEK İÇİN 
 @app.route('/api/users',methods=['POST'])
-def kullanici_ekle():  #BURALARDA YAZDIĞIMIZ FONKSİYONLAR ÜSTTEKİ URL İLE ÇALIŞIR.
+def kullanici_ekle():  
     data = requests.get_json()
     user_id = data.get('id'),
     name = data.get('name'),
